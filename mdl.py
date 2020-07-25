@@ -11,7 +11,6 @@ class UnitConversion:
         self.rTU = rTU  # Result unit for time
         self.Speed = sX
         self.Result = sX
-
         self.convertTime()
 
     def convertTime(self):
@@ -19,11 +18,11 @@ class UnitConversion:
         lS = self.listLocator(self.tmunits, self.sTU)
         deltaU = lR - lS
         while deltaU > 0:
-            self.Result / self.time[lS]
+            self.Result /= self.time[lS]
             lS += 1
             deltaU = lR - lS
         while deltaU < 0:
-            self.Result * self.time[lS - 1]
+            self.Result *= self.time[lS - 1]
             lS -= 1
             deltaU = lR - lS
 
