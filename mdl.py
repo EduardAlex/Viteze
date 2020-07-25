@@ -28,7 +28,7 @@ class UnitConversion:
             deltaU = lR - lS
 
     def listLocator(self, listtl, lt):
-        for i, j in enumerate(self.listtl):
+        for i, j in enumerate(listtl):
             if j == lt:
                 return i
         return None
