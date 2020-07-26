@@ -1,14 +1,14 @@
-mm 0.001
-cm 0.01
-dm 0.1
-m 1
-dam 10
-hm 100
-km 1000
-th 0.0000254
-in 0.0254
-ft 0.3048
-yd 0.9144
-ch 20.1168
-fur 201.168
-mi 1609.344
+mm 0.001 Millimeters
+cm 0.01 Centimeters
+dm 0.1 Decimeters
+m 1 Meters
+dam 10 Decameters
+hm 100 Hectometers
+km 1000 Kilometers
+th 0.0000254 Thous
+in 0.0254 Inches
+ft 0.3048 Feet
+yd 0.9144 Yards
+ch 20.1168 Chains
+fur 201.168 Furlongs
+mi 1609.344 Miles
