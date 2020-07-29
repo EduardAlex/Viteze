@@ -1,0 +1,16 @@
+mL 0.001 Millilitres
+cL 0.01 Centilitres
+dL 0.1 Decilitres
+L 1 Litres
+daL 10 Decalitres
+hL 100 Hectolitres
+kL 1000 Kilolitres
+mm3 0.000001 Cubic-Millimetres
+cm3 0.001 Cubic-Centimetres
+dm3 1 Cubic-Decimetres
+m3 1000 Cubic-Metres
+dam3 1000000 Cubic-Decametres
+pt 3.785411 Pints
+gal 0.473176 Gallons
+ft3 28.316864 Cubic-Feet
+in3 0.016387 Cubic-Inches

@@ -5,6 +5,7 @@ def getUn(tC):
 			a[e] = i[:-1]
 		for i, j in enumerate(a):
 			a[i] = j.split(" ")
+			a[i][2].replace("-", " ")
 		return a
 
 def listLocator(listtl, lt):
