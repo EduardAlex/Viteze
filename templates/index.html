@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Viteze </title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- <style type="text/css" media="screen" src="/css/my.css"></style> -->
+	</head>
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+				<h1> Convert speed over <span class="text-primary">{{propsel[2]}}</span> </h1>
+				<br>
+				<div class="dropdown">
+					<button type="button" class="btn btn-warning dropdown-toggle btnoh" data-toggle="dropdown">
+					Choose another unit measurement
+					</button>
+					<div class="dropdown-menu">
+						{% for i, j, k in props %}
+							<a href="/{{i}}" class="dropdown-item"> {{j}} </a>
+						{% endfor %}
+					</div>
+				</div>
+				<br>
+				<form action="/{{propsel[0]}}" method="post" style="width:100%">
+					<button type="submit" class="btn btn-primary">
+						Convert
+					</button>
+					<br><br>
+					<label for="inpUn"> From: </label>
+					<div class="input-group" id="inpUn" style="width:50%">
+						<input type="number" min="1.0" step="0.1" value="{{selun[0]}}" class="form-control" name="iv"/>
+						<div class="input-group-prepend">
+							<select name="iu" class="form-control">
+								{% for un in units %}
+									<option value="{{un}}" {% if un == selun[1] %} selected {% endif %} > {{un}}
+									</option>
+								{% endfor %}
+							</select>
+							<span class="input-group-text"> / </span>
+							<select name="it" class="form-control">
+								{% for ti in time %}
+									<option value="{{ti}}" {% if ti == selun[2] %} selected {% endif %} > {{ti}}
+									</option>
+								{% endfor %}
+							</select>
+						</div>
+					</div>
+					<br>
+					<label for="outUn"> To: </label>
+					<div class="input-group" id="outUn" style="width:50%">
+							<span class="input-group-text bg-white">
+								{{res}}
+							</span>
+						<div class="input-group-append">							
+							<select name="ou" class="form-control">
+								{% for un in units %}
+									<option value="{{un}}" {% if un == selun[3] %} selected {% endif %} > {{un}}
+									</option>
+								{% endfor %}
+							</select>
+							<span class="input-group-text"> / </span>
+							<select name="ot" class="form-control">
+								{% for ti in time %}
+									<option value="{{ti}}" {% if ti == selun[4] %} selected {% endif %} > {{ti}}
+									</option>
+								{% endfor %}
+							</select>
+						</div>
+					</div>
+				</form>
+				<br>
+				<br>
+				<span style="font-size: 75%"> Created by David Eduard </span>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	</body>
+</html>
