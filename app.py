@@ -30,7 +30,7 @@ def propchosen(prop):
 	for p, d, f in os.walk("units"):
 		for i in f:
 			props.append([i, uper(i), uper(i).lower()])
-	units = getUn("units\\" + prop)
+	units = getUn("units/" + prop)
 	time = getUn("time")
 	# print(props)
 	if request.method == "POST":

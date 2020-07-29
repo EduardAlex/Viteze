@@ -33,7 +33,7 @@ class UnitConversion:
 		#     for i in a:
 		#         b = i.split(" ")
 		#         self.unt[b[0]] = float(b[1])
-		h = getUn("units\\" + tC)
+		h = getUn("units/" + tC)
 		for i in h:
 			self.unt[i[0]] = float(i[1])
 
