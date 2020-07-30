@@ -1,3 +1,5 @@
+import os
+
 def getUn(tC):
 	with open(tC) as f:
 		a = f.readlines()
@@ -13,6 +15,12 @@ def listLocator(listtl, lt):
 		if j == lt:
 			return i
 	return None
+
+def joinall(*df):
+	a = os.getcwd()
+	for dorf in df:
+		a = os.path.join(a,df)
+	return a
 
 class UnitConversion:
 	def __init__(self, sX, sXU, sTU, rXU, rTU, tC):
@@ -33,7 +41,7 @@ class UnitConversion:
 		#     for i in a:
 		#         b = i.split(" ")
 		#         self.unt[b[0]] = float(b[1])
-		h = getUn("units/" + tC)
+		h = getUn(joinall("units", tC))
 		for i in h:
 			self.unt[i[0]] = float(i[1])
 
@@ -44,7 +52,7 @@ class UnitConversion:
 		#     for i in a:
 		#         b = i.split(" ")
 		#         self.time[b[0]] = float(b[1])
-		h = getUn("time")
+		h = getUn(joinall("time"))
 		for i in h:
 			self.time[i[0]] = float(i[1])
 

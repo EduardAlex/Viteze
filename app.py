@@ -1,5 +1,5 @@
 from mdl import UnitConversion
-from mdl import getUn, listLocator
+from mdl import getUn, joinall
 from flask import Flask
 from flask import render_template
 from flask import redirect
@@ -27,11 +27,11 @@ def index():
 @app.route("/<prop>", methods=["POST", "GET"])
 def propchosen(prop):
 	props = []
-	for p, d, f in os.walk("units"):
+	for p, d, f in os.walk(joinall("units")):
 		for i in f:
 			props.append([i, uper(i), uper(i).lower()])
-	units = getUn("units/" + prop)
-	time = getUn("time")
+	units = getUn(joinall("units", prop))
+	time = getUn(joinall("time"))
 	# print(props)
 	if request.method == "POST":
 		iv = float(request.form["iv"])

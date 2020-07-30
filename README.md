@@ -1,2 +1,2 @@
 # Viteze
-Convertor de viteze
+Ză convertăr of ză vitezes
