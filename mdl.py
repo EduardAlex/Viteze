@@ -19,7 +19,7 @@ def listLocator(listtl, lt):
 def joinall(*df):
 	a = os.getcwd()
 	for dorf in df:
-		a = os.path.join(a,df)
+		a = os.path.join(a,dorf)
 	return a
 
 class UnitConversion:
