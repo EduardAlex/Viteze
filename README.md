@@ -1,2 +1,2 @@
 # Viteze
-Ză convertăr of ză vitezes
+Entry-level rate of change in time converter.
